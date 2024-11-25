@@ -33,7 +33,7 @@ numpy==2.0.2
 packaging==24.1
 platformdirs==4.3.6
 pooch==1.8.2
-progressbar==2.5
+progressbar2==3.53.1 
 pycparser==2.22
 PyYAML==6.0.2
 regex==2024.9.11
