@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Workout Gym</title> -->
+    <title>{% block title %}Workout Gym{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+
+    <link rel="icon" href="{{ url_for('static', filename='images/1logo.png') }}" type="">
+
+    
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <nav class="navbar">
+                <ul class="nav-left">
+                    <li id="logo"><a href="#"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo"></a></li>
+                </ul>
+                <ul class="nav-center">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('membership') }}" >Memberships</a></li>
+                    
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="nav-right">
+                    <li><a href="{{ url_for('membership') }}">Join Now</a></li>
+                </ul>
+            </nav>
+        </div>
+     
+    </header>
+    {% block content %}
+    {% endblock %}
+     <!-- Contact -->
+     <section id="contact">
+        <h2 class="heading">Get in Touch</h2>
+        <p>Contact us to learn more about our gym and membership plans.</p>
+        <ul>
+            <li><a href="https://www.google.com/maps?q=123+Fitness+Street,+Karachi,+PK" target="_blank">🗺 123 Fitness Street, Karachi, PK</a></li>
+            <li><a href="mailto:info@workout.com" target="_blank">✉ info@workout.com</a></li>
+            <li><a href="tel:123-456-7890" target="_blank">☎ 123-456-7890</a></li>
+        </ul>
+    </section>
+    <footer>
+        <p> &copy;2024 Workout. All rights reserved. | <a href="https://www.linkedin.com/in/naeemuddin-nyt/">Designed by NU</a></p>
+    </footer>
+</body>
+</html>
